@@ -1,0 +1,22 @@
+<table class="table table-bordered">
+    <thead>
+      <tr class="text-center">
+        <th scope="col">Código</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Ver detalles</th>
+        <th scope="col">Editar producto</th>
+        <th scope="col">Eliminar producto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="text-center" *ngFor="let producto of productos">
+        <td>{{producto.id}}</td>
+        <td>{{producto.nombre}}</td>
+        <td>${{producto.precio}}</td>
+        <td><button class="btn btn-outline-primary" routerLink="/detalle/{{producto.id}}"><i class="fa-solid fa-eye"></i> Ver</button></td>
+        <td><button class="btn btn-outline-warning" routerLink="/editar/{{producto.id}}"><i class="fa-solid fa-pen-to-square"></i> Editar</button></td>
+        <td><button class="btn btn-outline-danger" (click)="borrar(producto.id)"><i class="fa-solid fa-trash"></i> Eliminar</button></td>
+      </tr>
+    </tbody>
+  </table>

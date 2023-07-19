@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row mt-5" *ngIf="producto">
+        <div class="col-md-4 mx-auto">
+            <div class="card mt-5" style="width: 18rem;">
+                <div class="card-header text-center">
+                  Detalles del producto
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><b>Código: </b>{{producto.id}}</li>
+                  <li class="list-group-item"><b>Nombre: </b>{{producto.nombre}}</li>
+                  <li class="list-group-item"><b>Precio: </b>${{producto.precio}}</li>
+                </ul>
+                <div class="card-footer">
+                    <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fa-solid fa-arrow-right-to-bracket"></i> Volver</button>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
